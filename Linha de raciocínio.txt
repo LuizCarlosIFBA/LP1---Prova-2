@@ -1,0 +1,13 @@
+Q2 - Descrição: basicamente, o método main ficou responsável por invocar o método e todas as regras de negócio ficaram
+"encapsuladas" em outro arquivo que é estendido no arquivo "main". Uma maneira mais simples e rápida de melhorar a legibilidade 
+do código e facilitar a manutenção.
+
+
+Explicação= As funções a nível macro são: ler, calcular e contar. Por isso, as separei em funções diferentes... Na função calcular, além de alocar e
+preencher eu organizo em ordem crescente para facilitar a funcionalidade da outra função que será invocada na mesma(contador), que por sua vez contará quantos valores diferentes serão repetidos e escolherá a maior repetição  e o "ler" será responsável apenas por receber o número de termos e invocar o método calcular. Por isso, assim que o ler for chamado no main, todos os outros três serão acionados.  
+
+Q3 -(Mesma descrição da questão 2) Descrição: basicamente, o método main ficou responsável por invocar o método e todas as regras de negócio ficaram
+"encapsuladas" em outro arquivo que é estendido no arquivo "main". Uma maneira mais simples e rápida de melhorar a legibilidade 
+do código e facilitar a manutenção.
+
+Explicação= O arquivo main, será responsável por invocar uma única função, aqual consquentemente irá invocar todas as outras(quadMagico()) e a regra de negócio dessa ação deverá alocar vetores, validar atributos e somar a diagonal principal. 
