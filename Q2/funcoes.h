@@ -14,20 +14,26 @@ if(contUm>contDois){
 	maior = contUm;
 }else maior = contDois;
 
-printf("\n %d",maior);
-
+if(intervalo == 2){
+      printf("\n%d\n",maior);
+      printf("Do(s) 2 número(s) sorteado(s), o que mais aparece(1 e 2), se repetem 1 vezes.\n");
+      printf("Portanto, você obteve 1 ponto\n");
+}else{printf("\n%d\n",maior);
+      printf("Do(s) %d número(s) sorteado(s), o que mais aparece(moda), se repete %d vezes.\n",intervalo,maior);
+      printf("Portanto, você obteve %d pontos\n",maior);
+     }
 }
 
-int calcular(int *pN){
-        int *vet= malloc((*pN)*sizeof(sizeof(int*)));
-	for(int i=0;i<*pN;i++){
+int calcular(int n){
+        int *vet= malloc((n)*sizeof(sizeof(int*)));
+	for(int i=0;i<n;i++){
      		vet[i]=1+rand()%2;
-		printf(" %d",vet[i]);
+		printf("%d ",vet[i]);
 	}
-
+	
 	int aux;
-	for(int i=0;i<*pN;i++){
-		for(int j = 0;j<*pN;j++){
+	for(int i=0;i<n;i++){
+		for(int j = 0;j<n;j++){
 		       if(vet[i]<vet[j]){
 		           aux = vet[i];
 			   vet[i] = vet[j];
@@ -35,16 +41,15 @@ int calcular(int *pN){
 		       }	
 		}     		
 	}
-	contador(*pN,vet);
+	contador(n,vet);
 }
 
 void ler(){
 	int n;
 	printf("Escreva quantos inteiros deseja sortear \n");
 	scanf("%d",&n);
-	int *pN = &n;
-        
-	calcular(pN);	
+	
+	calcular(n);	
 }
 
 
